@@ -1,0 +1,406 @@
+@import "reset.css";
+
+:root {
+  --main-bg-color: #d5e2e8;
+  --main-color: #0aa01e;
+  --secondary-color: blanchedalmond;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-family: "Roboto", sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.nav_list {
+  background-color: var(--secondary-color);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.nav_item {
+  display: block;
+}
+
+.nav_item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.nav_link {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: black;
+}
+
+.nav_link:hover {
+  color: rgb(6, 197, 54);
+}
+
+.hello {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.hello_text {
+  font-size: 1.5em;
+  opacity: 0;
+}
+
+.header-main {
+  font-size: 5em;
+}
+
+.header-main:hover ~ .hello_text {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.main-color {
+  color: var(--main-color);
+}
+
+.day-quote {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding-right: 24px;
+}
+
+.day-quote-inner {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.day-quote_header {
+  font-size: 2em;
+}
+
+.day-quote_text {
+  font-weight: 300;
+  font-style: italic;
+}
+
+.day-quote_author {
+  display: block;
+  text-align: right;
+  padding-top: 16px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-article {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+}
+
+.galery {
+  display: flex;
+  justify-content: space-between;
+}
+
+.galery_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  border: 1px solid #000;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+}
+
+.galery_item_name {
+  font-size: 1.2em;
+  padding-top: 24px;
+  padding-bottom: 8px;
+}
+
+.article_header {
+  font-size: 3em;
+}
+
+.article_text {
+  font-size: 1.2em;
+  padding-bottom: 8px;
+  text-indent: 36px;
+}
+
+.hobbies_list {
+  list-style: none;
+}
+
+.hibbies_item {
+  position: relative;
+  padding-left: 36px;
+  font-size: 1.4em;
+}
+
+.hibbies_item::before {
+  position: absolute;
+  content: "";
+  background-image: url("img/star.png");
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.to-top {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: blueviolet;
+}
+
+.to-top::before {
+  position: absolute;
+  content: "";
+  background-image: url("img/totop.png");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%) rotate(-90deg);
+}
+
+.friends_list {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.friends_item {
+  display: flex;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 24px;
+  margin-bottom: 24px;
+  border: solid 1px #000;
+}
+
+.friends_img_wrapper {
+  width: 50%;
+}
+
+.friends_info {
+  flex-grow: 1;
+  margin-left: 24px;
+}
+
+.friends_img_wrapper {
+  max-width: 320px;
+}
+
+.friends_info_list {
+  display: flex;
+  flex-direction: column;
+}
+
+.info_item {
+  display: flex;
+  font-size: 1.3em;
+}
+
+.info_param {
+  font-weight: 700;
+  display: block;
+  padding-right: 16px;
+}
+
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glossary_title {
+  font-size: 1.3em;
+  color: var(--main-color);
+}
+
+.glossary_text {
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+.footer {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: var(--secondary-color);
+}
+
+.contact {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form_textarea {
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.form_input {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.form_submit_btn {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 5px;
+  width: 320px;
+  align-self: flex-end;
+  background-color: var(--main-color);
+  border: 1px solid #000;
+}
+
+.form_submit_btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.copiright {
+  text-align: center;
+}
+
+@media all and (max-width: 48em) {
+  .galery {
+    flex-direction: column;
+  }
+
+  .galery_item {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .friends_img_wrapper {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .friends_item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .friends_info {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .form_submit_btn {
+    width: 100%;
+  }
+
+  .day-quote {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  .day-quote-inner {
+    width: 100%;
+  }
+
+  .day-quote_header {
+    font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (768 - 320)));
+  }
+
+  .header-main {
+    font-size: calc(36px + (64 - 36) * ((100vw - 320px) / (768 - 320)));
+  }
+
+  .article_header {
+    font-size: calc(28px + (36 - 28) * ((100vw - 320px) / (768 - 320)));
+  }
+
+  .article_text,
+  .hibbies_item,
+  .glossary_text,
+  .info_item,
+  .nav_link {
+    font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (768 - 320)));
+  }
+}
+
+@media all and (max-width: 30em) {
+  .nav_list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav_item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+}
